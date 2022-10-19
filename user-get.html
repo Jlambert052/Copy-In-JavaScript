@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="javascript/user-get.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <input id="xpk" type="number">
+        <button class="btn btn-secondary" onclick="display()">Get User</button>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <td>Id</td>
+            <td id="xid"></td>
+        </tr>
+        <tr>
+            <td>Full name</td>
+            <td id="xfullname"></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td id="xusername"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td id="xphone"></td>
+        </tr>
+       <tr>
+            <td>Email</td>
+            <td id="xemail"></td>
+        </tr> 
+       <tr>
+            <td>Reviewer?</td>
+            <td id="xreviewer"></td>
+        </tr> 
+       <tr>
+            <td>Admin?</td>
+            <td id="xadmin"></td>
+        </tr> 
+    </table>
+</body>
+</html>

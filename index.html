@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script lang="javascript">
+
+        let loaded = () => {
+            let inputCtrl = document.getElementById("inp");
+            inputCtrl.value = "BOOTCAMP";
+        }
+        
+        let copy = () => {
+            let inputCtrl = document.getElementById("inp");
+            let value = inputCtrl.value;
+            let labelCtrl = document.getElementById("lbl");
+            labelCtrl.innerHTML = `<i>${value}</i>`;
+            labelCtrl.style.color = "blue";
+        }
+        </script>
+</head>
+<body onload="loaded()">
+    <input id="inp">
+    <button onclick="copy()">Copy it.</button><br>
+    <label id="lbl"></label>
+    <script lang="javascript">
+
+    </script>
+
+
+</body>
+</html>
