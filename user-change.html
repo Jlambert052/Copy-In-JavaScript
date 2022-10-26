@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="javascript/utility.service.js"></script>
+    <script src="javascript/user.service.js"></script>
+    <script src="javascript/user-change.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span class="fw-bold">User Detail Edit</span> |
+        <a href="user-list.html">Return to List</a>
+    </div>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td><input id = "xid" type="number" value="0" disabled></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input id= "xusername"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input id= "xpassword" type="password" value="Train@MAX"></td>
+            </tr>
+            <tr>
+                <td>Firstname</td>
+                <td><input id= "xfirstname"></td>
+            </tr>
+            <tr>
+                <td>Lastname</td>
+                <td><input id= "xlastname"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input id= "xphone"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input id= "xemail"></td>
+            </tr>
+            <tr>
+                <td>IsReviewer</td>
+                <td><input id= "xisreviewer" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>IsAdmin</td>
+                <td><input id= "xisadmin" type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="save()" class="btn btn-primary">Save</button>
+</body>
+</html>

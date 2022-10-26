@@ -1,5 +1,5 @@
 const refresh = () => {
-    $.getJSON("http://localhost:5432/api/users")
+    UserService.list()
         .done((res) => {
             display(res);
         })
@@ -20,6 +20,11 @@ const display = (users) => {
         row += `<td>${user.email}</td>`;
         row += `<td>${user.isReviewer ? "Yes" : "No"}</td>`;
         row += `<td>${user.isAdmin ? "Yes" : "No"}</td>`;
+        row += `<td>`
+        row +=       `<a href="user-get.html?id=${user.id}">Detail</a>`
+        row +=      `  |  `
+        row +=      `<a href="user-change.html?id=${user.id}">Change</a>`
+        row += `</td>` 
         row += "</tr>";
         tbodyCtrl.innerHTML += row;
     }

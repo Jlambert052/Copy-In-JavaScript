@@ -1,5 +1,5 @@
 const refresh = () => {
-    $.getJSON("http://localhost:5432/api/vendors/")
+    VendorService.list()
             .done((res) => {
                 display(res);
             })
@@ -24,6 +24,9 @@ const display = (vendors) => {
         row += `<td>${vendor.zip}</td>`;
         row += `<td>${vendor.phone}</td>`;
         row += `<td>${vendor.email}</td>`;
+        row += `<td> <a href="vendor-get.html?id=${vendor.id}">Detail</a>`
+        row +=      `  |  `
+        row +=      `<a href="vendor-change.html?id=${vendor.id}">Change</a> </td>`
         row += "</tr>";
         tbodyCtrl.innerHTML += row; 
     }

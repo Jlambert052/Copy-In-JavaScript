@@ -1,7 +1,5 @@
-const display = () => {
-    let id = +document.getElementById("xpk").value;
-    console.debug(id); 
-    $.getJSON(`http://localhost:5432/api/users/${id}`)
+const display = (id) => {
+    UserService.get(id)
         .done((res) => {
             render(res);
         })
@@ -20,3 +18,19 @@ const render = (user) => {
     document.getElementById("xreviewer").innerText = user.isReviewer ? "Yes" : "No";
     document.getElementById("xadmin").innerText = user.isAdmin ? "Yes" : "No";
 }
+
+const remove = () => {
+    let id = $("#xid").text();
+    UserService.remove(id)
+        .done((res) => {
+            alert("removed.");
+
+        })
+        .fail((err) => {
+            alert("failed to remove.");
+        });
+}
+let parameters = UtilityService.getUrlParms();
+console.debug(parameters);
+let id = +parameters.id;    
+display(id);

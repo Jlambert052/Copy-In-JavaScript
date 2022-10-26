@@ -1,6 +1,5 @@
-const display = () => {
-    let id = +document.getElementById("xpk").value;
-        $.getJSON(`http://localhost:5432/api/vendors/${id}`)
+const display = (id) => {
+    VendorService.get(id)
             .done((res) => {
                 render(res);
             })
@@ -8,7 +7,6 @@ const display = () => {
                 console.error(err);
             })
 }
-
 
 const render = (vendor) => {
     document.getElementById("xid").innerText = vendor.id;
@@ -21,3 +19,20 @@ const render = (vendor) => {
     document.getElementById("xphone").innerText = vendor.phone;
     document.getElementById("xemail").innerText = vendor.email;
 }
+
+const remove = () => {
+    let id = $("#xid").text();
+    VendorService.remove(id)
+        .done((res) => {
+            alert("removed.");
+
+        })
+        .fail((err) => {
+            alert("failed to remove")
+        });
+}
+
+let parameters = UtilityService.getUrlParms();
+console.debug(parameters);
+let id = +parameters.id;    
+display(id);
