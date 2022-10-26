@@ -30,5 +30,16 @@ const display = (users) => {
     }
 
 }
+//using JQuery instead of JavaScript
+// let tbodyCtrl = $("#tbody");
+// tbodyCtrl.html("");
+// for(let user of users) {
+//     let row = $("<tr></tr>");
+//     row.append($(`<td>${user.id}</td>`));
+//     etc...
+//     let action = $("<td></td>");
+//     action.append($(`<a href="user-get.html?id=${user.id}">Detail</a>`));
+//     etc...
+// }
 
 refresh();
