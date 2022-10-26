@@ -16,7 +16,7 @@ class VendorService {
             url: `${url}`,
             data: JSON.stringify(vendor),
             contentType: "application/json"
-        });
+        })
     }
 
     static change = (vendor) => {
@@ -25,13 +25,13 @@ class VendorService {
             url: `${url}/${vendor.id}`,
             data: JSON.stringify(vendor),
             contentType: "application/json"
-        });
+        })
     }
 
     static delete = (id) => {
         return $.ajax ({
             method: "DELETE",
             url: `${url}/${id}`
-        });
+        })
     }
 }
